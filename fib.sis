@@ -1,0 +1,15 @@
+define main
+
+function fib( n : integer returns integer )
+  if n < 3 then
+    1
+  else
+    fib(n - 2) + fib(n - 1)
+  end if
+end function
+
+function main( returns array [integer])
+  for ix in 44, 46
+    returns array of fib(ix)
+  end for
+end function

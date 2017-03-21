@@ -1,0 +1,10 @@
+module Fibber where
+
+fib :: Int -> Int
+fib x = if x < 3 then 1
+        else (fib(x - 1) + fib(x - 2))
+
+main args = do
+  println (fib(44))
+  println (fib(45))
+  println (fib(46))
