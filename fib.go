@@ -17,7 +17,7 @@ func fibtest(n int) {
 }
 
 func main() {
-	go fibtest(44)
-	go fibtest(45)
+	fibtest(44)
+	fibtest(45)
 	fibtest(46)
 }
