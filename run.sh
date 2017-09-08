@@ -9,9 +9,9 @@ echo  " "
 echo "-- python3 -- python --"
 time python3 fib04.py
 
-#echo  " "
-#echo "-- D8/V8 -- javascript --"
-#time d8 fib04.js
+echo  " "
+echo "-- D8/V8 -- javascript --"
+time d8 fib04.js
 
 echo " "
 echo "-- node.js -- javascript --"
@@ -27,9 +27,9 @@ echo "-- gcc -- C --"
 time ./fibC
 rm ./fibC
 
-#echo " "
-#echo "-- rdmd -- D --"
-#time rdmd fib04.d
+echo " "
+echo "-- rdmd -- D --"
+time rdmd fib04.d
 
 echo " "
 dmd -O -inline -release -noboundscheck fib04.d
@@ -196,4 +196,8 @@ echo " "
 echo "-- eta haskell --"
 eta fib.hs
 time java -jar Runfib.jar
+
+echo " "
+echo "-- cling --"
+time cling fibCling.c
 

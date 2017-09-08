@@ -3,7 +3,7 @@ def fib(n):
     return 1
   return fib(n-2) + fib(n-1)
 
-print(fib(34))
-print(fib(35))
-print(fib(36))
+print(fib(44))
+print(fib(45))
+print(fib(46))
 
