@@ -29,7 +29,7 @@ import frege.prelude.PreludeText;
 
 @SuppressWarnings("unused")
 @Meta.FregePackage(
-  source="Fibber.fr", time=1484497251080L, jmajor=1, jminor=7,
+  source="Fibber.fr", time=1507493763144L, jmajor=1, jminor=7,
   imps={
     "frege.Prelude", "frege.prelude.PreludeArrays", "frege.prelude.PreludeBase", "frege.prelude.PreludeIO",
     "frege.prelude.PreludeList", "frege.prelude.PreludeMonad", "frege.prelude.PreludeText", "frege.java.util.Regex"

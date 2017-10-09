@@ -3,8 +3,6 @@ fun fib(n: Int): Int =
 
 fun main(args: Array<String> = arrayOf<String>())
 {
-  println(fib(44));
-  println(fib(45));
-  println(fib(46));
+  (44..46).forEach { println(fib(it)) }
 }
 

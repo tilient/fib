@@ -96,7 +96,7 @@ time julia fib04.jl
 
 echo " "
 echo "-- clojure --"
-time java -XX:+AggressiveOpts -Xmx8m -Dclojure.compiler.direct-linking=true -cp clojure/clojure-1.8.0.jar clojure.main fib04.clj
+time java -Xshare:on -XX:+AggressiveOpts -Xmx8m -Dclojure.compiler.direct-linking=true -cp clojure/clojure-1.8.0.jar clojure.main fib04.clj
 
 echo " "
 echo "-- kawa --"
@@ -152,7 +152,7 @@ time ./fib.exe
 echo " "
 echo "-- kotlin --"
 kotlinc fib.kt -include-runtime -d kotlinfib.jar
-time java -jar kotlinfib.jar
+time java -Xshare:on -jar kotlinfib.jar
 
 echo " "
 echo "-- erlang --"
@@ -167,7 +167,7 @@ time ./fib
 echo " "
 echo "-- frege --"
 java -jar frege3.jar -target 1.7 -O Fibber.fr
-time java -XX:+AggressiveOpts -Xmx8m -cp frege3.jar:. Fibber
+time java -Xshare:on -XX:+AggressiveOpts -Xmx8m -cp frege3.jar:. Fibber
 
 echo " "
 echo "-- yeti --"
@@ -195,9 +195,13 @@ time java -jar fibber.jar
 echo " "
 echo "-- eta haskell --"
 eta fib.hs
-time java -jar Runfib.jar
+time java  -Xshare:on -jar Runfib.jar
 
 echo " "
 echo "-- cling --"
 time cling fibCling.c
 
+echo " "
+echo "-- free pascal --"
+fpc fib04.pas -O3
+time ./fib04
