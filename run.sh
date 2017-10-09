@@ -153,6 +153,15 @@ echo " "
 echo "-- kotlin --"
 kotlinc fib.kt -include-runtime -d kotlinfib.jar
 time java -Xshare:on -jar kotlinfib.jar
+rm kotlinfib.jar
+
+echo " "
+echo "-- kotlin parallel 2 --"
+kotlinc -cp kotlinx-coroutines-core.jar p2fib.kt -include-runtime -d tmp.jar
+zipmerge kotlinp2fib.jar kotlinx-coroutines-core.jar tmp.jar
+rm tmp.jar
+time java -jar kotlinp2fib.jar
+rm kotlinp2fib.jar
 
 echo " "
 echo "-- erlang --"
