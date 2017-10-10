@@ -152,7 +152,8 @@ time ./fib.exe
 echo " "
 echo "-- kotlin --"
 kotlinc fib.kt -include-runtime -d kotlinfib.jar
-time java -Xshare:on -jar kotlinfib.jar
+time java -jar kotlinfib.jar
+time avian -jar kotlinfib.jar
 rm kotlinfib.jar
 
 echo " "
