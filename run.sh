@@ -157,6 +157,16 @@ time avian -jar kotlinfib.jar
 rm kotlinfib.jar
 
 echo " "
+echo "-- kotlin script --"
+time ./fib.kts
+
+echo " "
+echo "-- kotlin native --"
+konanc -opt fib.kt -o fib
+time ./fib.kexe
+rm fib.kexe
+
+echo " "
 echo "-- kotlin parallel 2 --"
 kotlinc -cp kotlinx-coroutines-core.jar p2fib.kt -include-runtime -d tmp.jar
 zipmerge kotlinp2fib.jar kotlinx-coroutines-core.jar tmp.jar
