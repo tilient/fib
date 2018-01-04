@@ -12,6 +12,6 @@ proc echofib(n :int) =
   echo "fib(", n, ") = ", fib(n)
 
 parallel:
-  for i in 44 .. 46:
+  for i in 44 .. 48:
     spawn echofib(i)
 
