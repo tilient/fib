@@ -146,7 +146,7 @@ time ./pony1
 
 echo " "
 echo "-- f# --"
-fsharpc -O  -o fib.exe fib.ml
+fsharpc -O -o fib.exe fib.fs
 time ./fib.exe
 
 echo " "
