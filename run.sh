@@ -225,3 +225,9 @@ echo " "
 echo "-- free pascal --"
 fpc fib04.pas -O3
 time ./fib04
+
+
+echo " "
+echo "-- C# --"
+mcs fib.cs
+time mono fib.exe
