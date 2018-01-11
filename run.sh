@@ -91,6 +91,12 @@ echo "-- go --"
 time go run fib04.go
 
 echo " "
+echo "-- gcc go --"
+gccgo -O4 fib.go -o fib
+time ./fib
+rm fib
+
+echo " "
 echo "-- julia --"
 time julia fib04.jl
 
