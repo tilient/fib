@@ -2,7 +2,7 @@ import threadpool
 {.experimental.}
 
 # compile with:
-#   nim c --threads:on -d:release pfib.nim
+# nim c --threads:on -d:release pfib.nim
 
 proc fib(n: int): int {.noinit.} =
   if n < 3: 1
