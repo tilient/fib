@@ -72,6 +72,13 @@ echo "-- CCL --"
 time ccl -Q -n -l ./fib04.lisp
 
 echo " "
+echo "-- OWL Scheme --"
+ol -o fib04_owl.c fib04.scm
+gcc -o fib04_owl fib04_owl.c
+time ./fib04_owl
+rm ./fib04_owl
+
+echo " "
 echo "-- Chicken Scheme --"
 csc -static -O5 -C -O3 fib04_chicken.scm
 time ./fib04_chicken
@@ -232,8 +239,13 @@ echo "-- free pascal --"
 fpc fib04.pas -O3
 time ./fib04
 
-
 echo " "
 echo "-- C# --"
 mcs fib.cs
 time mono fib.exe
+
+echo " "
+echo "-- fortran --"
+gfortran -O3 -o fib fib.f08
+time ./fib
+
