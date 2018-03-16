@@ -1,16 +1,16 @@
 program fibber;
 
-function fibonacci(n: integer): longint;
+function fibonacci(n: longint): longint;
 begin
 	if (n < 3) then
 		fibonacci := 1
 	else
-		fibonacci := fibonacci(n-2) + fibonacci(n-1);
+		fibonacci := fibonacci(n-1) + fibonacci(n-2);
 end;
 
-procedure fibtest(n: integer);
+procedure fibtest(n: longint);
 begin
-	writeln(n, ' : ', fibonacci(n))
+	writeln('fib(', n, ') = ', fibonacci(n))
 end;
 
 begin

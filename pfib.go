@@ -5,6 +5,18 @@ import (
 	"sync"
 )
 
+func fibonacci(n int) int {
+	if n < 3 {
+		return 1
+	} else {
+		return fibonacci(n-2) + fibonacci(n-1)
+	}
+}
+
+func fibtest(n int) {
+	fmt.Printf("%d : %d\n", n, fibonacci(n))
+}
+
 func fib(n int) int {
 	switch {
 	case n < 3:
@@ -21,10 +33,10 @@ func fib(n int) int {
 
 func main() {
 	var wg sync.WaitGroup
-	for n := 44; n <= 48; n++ {
+	for n := 44; n <= 46; n++ {
 		wg.Add(1)
 		go func(n int) {
-			fmt.Printf("%d : %d\n", n, fib(n))
+			fibtest(n)
 			wg.Done()
 		}(n)
 	}
