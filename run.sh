@@ -38,7 +38,7 @@ time ./fib04
 rm ./fib04
 
 echo " "
-ldc2 -O5 -boundscheck=off -release -strip-debug fib04.d
+ldc2 -mcpu=native -O -release -strip-debug fib04.d
 echo "-- ldc -- D --"
 time ./fib04
 rm ./fib04
@@ -144,7 +144,7 @@ time ./fib
 
 echo " "
 echo "-- rust --"
-rustc -O fib.rs
+rustc -O  -C target-cpu=native fib.rs
 time ./fib
 
 echo " "
