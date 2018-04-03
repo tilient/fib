@@ -8,9 +8,9 @@ rdmd -mcpu=native -O -release fib04.d
 
 to compile:
 
-dmd -O -inline -release -noboundscheck fib04.d
-ldc2 -mcpu=native -O -release -strip-debug fib04.d
 gdc -O3 -o fib04 fib04.d
+ldc2 -mcpu=native -O -release -strip-debug fib04.d
+dmd -O -inline -release -noboundscheck fib04.d
 
 */
 
