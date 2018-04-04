@@ -1,3 +1,14 @@
+#!/usr/bin/env dub
+/+ dub.json:
+{
+  "name" : "fibber",
+  "buildOptions": ["releaseMode", "optimize", "inline"],
+  "dflags-ldc": ["-mcpu=native", "xxx"],
+  "dflags-gdc": ["-O3", "yyy"],
+  "compiler" : "gdc"
+}
++/
+
 import std.stdio;
 
 /*
