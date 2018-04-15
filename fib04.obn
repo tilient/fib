@@ -1,0 +1,21 @@
+MODULE fib04;
+
+  IMPORT Out;
+
+PROCEDURE Fib(n: INTEGER): INTEGER;
+VAR
+  result : INTEGER;
+BEGIN
+  result := 1;
+  IF n > 2 THEN
+    result := Fib(n - 1) + Fib(n - 2)
+  END;
+  RETURN result
+END Fib;
+
+BEGIN
+  Out.Int(Fib(44), 8); Out.Ln;
+  Out.Int(Fib(45), 8); Out.Ln;
+  Out.Int(Fib(46), 8); Out.Ln
+END fib04.
+

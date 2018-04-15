@@ -249,3 +249,10 @@ echo "-- fortran --"
 gfortran -O3 -o fib fib.f08
 time ./fib
 
+echo " "
+echo "-- oberon 7 --"
+export CFLAGS=-O4
+export LDFLAGS=-O4
+obnc fib04.obn
+time ./fib04
+
