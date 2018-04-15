@@ -1,22 +1,6 @@
-#!/usr/bin/env dub
-/+ dub.json:
-{
-  "name" : "fibber",
-  "buildOptions": ["releaseMode", "optimize", "inline"],
-  "dflags-ldc": ["-mcpu=native", "xxx"],
-  "dflags-gdc": ["-O3", "yyy"],
-  "compiler" : "gdc"
-}
-+/
-
 import std.stdio;
 
 /*
-
-to run:
-
-rdmd -mcpu=native -O -release fib04.d
-
 to compile:
 
 gdc -O3 -o fib04 fib04.d
@@ -25,7 +9,8 @@ dmd -O -inline -release -noboundscheck fib04.d
 
 */
 
-pure ulong fib(ulong n)
+pure nothrow @safe @nogc
+ulong fib(ulong n)
 {
   return  n < 3 ? 1 : fib(n - 1) + fib(n - 2);
 }
