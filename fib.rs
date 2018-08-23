@@ -1,3 +1,4 @@
+// rustc -O -C target-cpu=broadwell fib.rs
 
 fn fib(n: u64) -> u64 {
   return if n < 3 { 1 } else { fib(n-1) + fib(n-2) }
